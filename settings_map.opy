@@ -18,6 +18,7 @@ settings {
         },
         "skirmish": {
             "enabledMaps": [
+                "newJunkCity",
                 "suravasa"
             ]
         }

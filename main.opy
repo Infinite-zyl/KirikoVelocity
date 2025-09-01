@@ -12,6 +12,9 @@
 # 角色初始化
 #!include "initialization/player_ini.opy"
 
+# 赛道信息初始化
+#!include "initialization/race_ini.opy"
+
 # 加载效果，包括音效，特效
 #!include "effects/"
 
@@ -21,5 +24,7 @@
 # 基础功能
 #!include "base/control.opy"
 
+#!include "base/race.opy"
+
 # 测试方法
-#!include "test_function/test.opy"
+#!include "test_function/race_test.opy"
