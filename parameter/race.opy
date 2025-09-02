@@ -1,7 +1,7 @@
 #!mainFile "../main.opy"
 
 enum GameStatus :
-    NONE = 0
+    IDLE = 0
     WAITING = 1
     IN_PROGRESS = 2
 

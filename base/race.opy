@@ -10,7 +10,7 @@ macro arrangePlayersAtStart(center, direction, spacing = 3.5):
         APAS_offset = (APAS_i - APAS_center_index) * spacing
         APAS_position = nearestWalkablePosition(center + start_line_direction * APAS_offset)
         race_players[APAS_i].teleport(APAS_position)
-        race_players[APAS_i].setFacing(direction, Relativity.TO_PLAYER)
+        race_players[APAS_i].setFacing(direction, Relativity.TO_WORLD)
 
 
 rule "传送玩家到起点":
@@ -19,7 +19,7 @@ rule "传送玩家到起点":
     @Condition game_status == GameStatus.IN_PROGRESS
     @Condition start_line_info_list[0] != null
 
-    if start_line_info_list[0] != null:
-        arrangePlayersAtStart(start_line_info_list[0][0], 
+    arrangePlayersAtStart(
+        start_line_info_list[0][0], 
         start_line_info_list[0][1], 
         start_spacing)

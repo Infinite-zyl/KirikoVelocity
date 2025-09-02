@@ -12,4 +12,4 @@ rule "初始化竞速信息_全局":
     @Condition isGameInProgress()
 
     start_spacing = 1.5 
-    game_status = GameStatus.NONE # 初始化为无比赛状态
+    game_status = GameStatus.IDLE # 初始化为无比赛状态
