@@ -1,2 +1,1 @@
-
-hostPlayer.teleport(vect(0, 0, 0))
+test_cases_pipeline = [].index(eventPlayer)

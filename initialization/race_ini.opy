@@ -6,7 +6,8 @@ rule "初始化竞速信息_玩家":
     @Condition isGameInProgress()
 
     eventPlayer.has_joined_race = false # 重置为未加入比赛
-
+    eventPlayer.player_status = GameStatus.IDLE # 初始化为无比赛状态
+    
 rule "初始化竞速信息_全局":
     @Event global
     @Condition isGameInProgress()

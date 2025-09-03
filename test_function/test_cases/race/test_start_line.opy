@@ -112,25 +112,17 @@ rule "排列检查_所有玩家":
     createDummy(Hero.KIRIKO, Team.1, 6, hostPlayer, hostPlayer.getFacingDirection())
     createDummy(Hero.KIRIKO, Team.1, 7, hostPlayer, hostPlayer.getFacingDirection())
     wait(2)
-    getPlayersInSlot(0, Team.1).on_board = true
     getPlayersInSlot(0, Team.1).has_joined_race = true
-    getPlayersInSlot(1, Team.1).on_board = true
     getPlayersInSlot(1, Team.1).has_joined_race = true
-    getPlayersInSlot(2, Team.1).on_board = true
     getPlayersInSlot(2, Team.1).has_joined_race = true 
-    getPlayersInSlot(3, Team.1).on_board = true
     getPlayersInSlot(3, Team.1).has_joined_race = true
-    getPlayersInSlot(4, Team.1).on_board = true
     getPlayersInSlot(4, Team.1).has_joined_race = true
-    getPlayersInSlot(5, Team.1).on_board = true
     getPlayersInSlot(5, Team.1).has_joined_race = true
-    getPlayersInSlot(6, Team.1).on_board = true
     getPlayersInSlot(6, Team.1).has_joined_race = true
-    getPlayersInSlot(7, Team.1).on_board = true
     getPlayersInSlot(7, Team.1).has_joined_race = true
 
 
-    game_status = GameStatus.IN_PROGRESS
+    game_status = GameStatus.WAITING
     mark_test_case_status = true
     waitUntil(
         check_list[test_cases_index][1] == CheckResult.PASS or 
@@ -159,24 +151,16 @@ rule "排列检查_部分玩家":
     createDummy(Hero.KIRIKO, Team.1, 6, hostPlayer, hostPlayer.getFacingDirection())
     createDummy(Hero.KIRIKO, Team.1, 7, hostPlayer, hostPlayer.getFacingDirection())
     wait(2)
-    getPlayersInSlot(0, Team.1).on_board = true
     getPlayersInSlot(0, Team.1).has_joined_race = true
-    getPlayersInSlot(1, Team.1).on_board = true
     getPlayersInSlot(1, Team.1).has_joined_race = true
-    getPlayersInSlot(2, Team.1).on_board = true
     getPlayersInSlot(2, Team.1).has_joined_race = true 
-    getPlayersInSlot(3, Team.1).on_board = false
-    getPlayersInSlot(3, Team.1).has_joined_race = false
-    getPlayersInSlot(4, Team.1).on_board = true
-    getPlayersInSlot(4, Team.1).has_joined_race = true
-    getPlayersInSlot(5, Team.1).on_board = true
-    getPlayersInSlot(5, Team.1).has_joined_race = true
-    getPlayersInSlot(6, Team.1).on_board = false
-    getPlayersInSlot(6, Team.1).has_joined_race = true
-    getPlayersInSlot(7, Team.1).on_board = true
+    getPlayersInSlot(3, Team.1).has_joined_race = true
+    getPlayersInSlot(4, Team.1).has_joined_race = false
+    getPlayersInSlot(5, Team.1).has_joined_race = false
+    getPlayersInSlot(6, Team.1).has_joined_race = false
     getPlayersInSlot(7, Team.1).has_joined_race = false
 
-    game_status = GameStatus.IN_PROGRESS
+    game_status = GameStatus.WAITING
     mark_test_case_status = true
     waitUntil(
         check_list[test_cases_index][1] == CheckResult.PASS or 

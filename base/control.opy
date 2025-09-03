@@ -36,6 +36,7 @@ macro Player.applyDriftImpulse():
 rule "速度控制":
     @Event eachPlayer
     @Condition isGameInProgress()
+    @Condition eventPlayer.player_status != GameStatus.WAITING
     @Condition eventPlayer.isCommunicatingEmote()
 
     while ruleCondition:

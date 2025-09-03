@@ -10,7 +10,7 @@ rule "地图工坊调整参数":
     speed_boosted_kmh = createWorkshopSettingFloat("氮气加速", "氮气加速最大速度KM/H", 70, 60, 80, 0)
     speed_boosted_time = createWorkshopSettingFloat("氮气加速", "持续时间", 0.5, 0.25, 1.5, 1)
     drift_factor = createWorkshopSettingFloat("漂移", "漂移系数", 0.5, 0.1, 0.9, 0)
-    test_cases_pipeline = createWorkshopSettingBool("测试用例", "启动测试用例流水线", true, 0)
+    test_cases_pipeline = createWorkshopSettingBool("测试用例", "启动测试用例流水线", false, 0)
     max_speed_ms = max_speed_kmh / KMH_TO_MS
     low_speed_ms = low_speed_kmh / KMH_TO_MS
     speed_boosted_ms = speed_boosted_kmh / KMH_TO_MS
