@@ -128,6 +128,7 @@ rule "排列检查_所有玩家":
         check_list[test_cases_index][1] == CheckResult.PASS or 
         check_list[test_cases_index][1] == CheckResult.FAIL , 99999)
     game_status = GameStatus.IDLE
+    race_players.player_status = GameStatus.IDLE
     destroyAllDummies()
     hostPlayer.teleport(test_ini_pos)
     wait(2)
@@ -166,6 +167,7 @@ rule "排列检查_部分玩家":
         check_list[test_cases_index][1] == CheckResult.PASS or 
         check_list[test_cases_index][1] == CheckResult.FAIL , 99999)
     game_status = GameStatus.IDLE
+    race_players.player_status = GameStatus.IDLE
     destroyAllDummies()
     hostPlayer.teleport(test_ini_pos)
     wait(2)
