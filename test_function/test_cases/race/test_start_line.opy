@@ -6,8 +6,8 @@ enum TestCase1 :
 
 
 enum CheckList :
-    CASE1 = "机器人数：7，均匀分布在一条直线上"
-    CASE2 = "机器人数：4，均匀分布在一条直线上"
+    CASE1 = "机器人数：7，均匀间叉分布在两列"
+    CASE2 = "机器人数：4，均匀间叉分布在两列"
 
 enum CheckResult :
     PASS = "通过"

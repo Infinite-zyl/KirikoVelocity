@@ -9,7 +9,7 @@ macro Player.buttonHoldPrint(button, msg_box = [], interval_time = 1):
             wait(interval_time)
         else:
             smallMessage(self, "操作已取消")
-            return
+            break
     self.is_holding = true
 
 macro Player.twoButtonHoldPrint(button1, button2, msg_box = [], interval_time = 1):
@@ -21,7 +21,7 @@ macro Player.twoButtonHoldPrint(button1, button2, msg_box = [], interval_time = 
             wait(interval_time)
         else:
             smallMessage(self, "操作已取消")
-            return
+            break
     self.is_holding = true
 
 macro Player.buttonHold(button, hold_time = 3):
@@ -31,7 +31,7 @@ macro Player.buttonHold(button, hold_time = 3):
             wait(1)
         else:
             smallMessage(self, "操作已取消")
-            return
+            break
     self.is_holding = true
 
 macro Player.twoButtonHold(button1, button2, hold_time = 3):
@@ -41,5 +41,5 @@ macro Player.twoButtonHold(button1, button2, hold_time = 3):
             wait(1)
         else:
             smallMessage(self, "操作已取消")
-            return
+            break
     self.is_holding = true

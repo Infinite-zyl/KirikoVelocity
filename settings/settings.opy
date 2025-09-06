@@ -9,7 +9,9 @@ settings {
         "mapRotation": "afterGame",
         "team1Slots": 8,
         "team2Slots": 0,
-        "returnToLobby": "afterGame"
+        "spectatorSlots": 12,
+        "returnToLobby": "afterGame",
+        "useExperimentalUpdate": true
     },
     "gamemodes": {
         "clash": {
@@ -20,6 +22,13 @@ settings {
             "enabledMaps": [
                 "suravasa"
             ]
+        },
+        "general": {
+            "enableHeroSwitching": false,
+            "respawnTime%": 0,
+            "gamemodeStartTrigger": "immediately",
+            "heroLimit": "off",
+            "enableKillCam": false
         }
     },
     "heroes": {

@@ -4,13 +4,15 @@
 # 加载全局变量、玩家变量、宏、地图工坊参数、公共方法变量
 #!include "parameter/variables.opy"
 #!include "parameter/macros.opy"
-#!include "parameter/workshop_setting.opy"
 
 # 加载公共方法
 #!include "common/"
 
+# 工坊参数初始化
+#!include "initialization/workshop_setting_ini.opy"
+
 # 角色初始化
-#!include "initialization/player_ini.opy"
+#!include "initialization/control_ini.opy"
 
 # 赛道信息初始化
 #!include "initialization/race_ini.opy"

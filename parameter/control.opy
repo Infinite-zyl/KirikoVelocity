@@ -18,11 +18,6 @@ globalvar drift_factor # 漂移系数
 
 
 playervar on_board # 玩家是否在滑板上(其实也就是判断做没做表情)
-playervar progress_bar_hud_arr # 进度条hud数组
-playervar text_hud_arr # 文字hud数组
-playervar map_text_hud_arr # 地图hud数组
-playervar hud_records # 每个玩家的 HUD 记录数组
-playervar hud_records_i # removeHudByName方法需要的计数i
 
 playervar real_speed_ms # 玩家当前实际速度m/s
 playervar max_speed_ms_player # 玩家最大速度km/h
@@ -39,7 +34,10 @@ playervar speed_boosted_rate_player # 玩家氮气加速系数
 playervar speed_boosted_ms_player # 玩家氮气加速最终速度
 playervar speed_boosted_time_player # 玩家氮气加速时长
 playervar boosted_state # 是否在氮气加速中
+playervar be_timestamp # 氮气加速时间戳数组
+playervar be_time # 氮气加速音效持续时间
 
+# 以下变量暂时废弃
 playervar is_drifting # 是否处于漂移状态
 playervar velocity_dir # 速度方向(矢量)
 playervar drift_forward_vector # 玩家前方向量，随玩家旋转

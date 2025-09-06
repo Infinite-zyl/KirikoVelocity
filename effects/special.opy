@@ -17,3 +17,10 @@ macro Player.showBoostedEffects():
         Color.WHITE, 
         eventPlayer.getPosition() + Vector.UP * 0.2 + Vector.BACKWARD * 0.2, 100, 
         EffectReeval.VISIBILITY_POSITION_AND_RADIUS)
+
+    eventPlayer.be_timestamp[len(eventPlayer.be_timestamp)] = "{}_{}".format(UeName.EFFECT2, round(getMatchTime()))
+    
+    eventPlayer.addUE(
+        eventPlayer.be_timestamp.last(), 
+        UeType.EFFECT, 
+        getLastCreatedEntity())

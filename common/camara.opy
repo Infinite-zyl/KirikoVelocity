@@ -21,4 +21,3 @@ macro Player.startCameraGroup(camera_position_group):
             7 / self.camera_position_group[self.cPG_i][2])
         wait(self.camera_position_group[self.cPG_i][2])
     self.cPG_i = 0
-    self.stopCamera()

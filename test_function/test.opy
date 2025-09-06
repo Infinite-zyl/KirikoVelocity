@@ -27,4 +27,4 @@ rule "删除进度条HUD":
     @Condition eventPlayer.isHoldingButton(Button.RELOAD)
     @Disabled
 
-    eventPlayer.removeHudByName("速度条")
+    eventPlayer.removeUEByName(UeName.HUD2)

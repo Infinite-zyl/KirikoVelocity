@@ -11,12 +11,12 @@ rule "进度条HUD_在做表情时可见":
         HudPosition.TOP, 1, 
         Color.WHITE, 
         HudReeval.VISIBILITY)
-    eventPlayer.addHudRecord("占位符", HUDType.TEXT, getLastCreatedText())
+    eventPlayer.addUE(UeName.TEXT1, UeType.TEXT, getLastCreatedText())
     progressBarHud(
         eventPlayer if eventPlayer.on_board else null, 
         updateEveryFrame(eventPlayer.getSpeed() / eventPlayer.speed_boosted_ms_player * 100), 
         "{0}KM/H".format(updateEveryFrame(eventPlayer.getSpeed() * KMH_TO_MS)), 
         HudPosition.TOP, 2, 
         Color.RED if eventPlayer.boosted_state else Color.WHITE)
-    eventPlayer.addHudRecord("速度条", HUDType.PROGRESS_BAR, getLastCreatedText())
+    eventPlayer.addUE(UeName.PROGRESS_BAR1, UeType.PROGRESS_BAR, getLastCreatedText())
 

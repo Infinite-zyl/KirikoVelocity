@@ -14,7 +14,7 @@ rule "加载当前地图起跑线信息":
     current_map = getCurrentMap()
     start_line_info_list = {
             Map.SURAVASA: [
-                [vect(77, 3, -42), vect(-1, 0, 0)]
+                [vect(66, 3, -42), vect(-1, 0, 0)]
             ],
             Map.NEW_JUNK_CITY: 1,
         }[current_map]

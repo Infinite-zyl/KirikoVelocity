@@ -36,7 +36,8 @@ macro Player.applyDriftImpulse():
 rule "速度控制":
     @Event eachPlayer
     @Condition isGameInProgress()
-    @Condition eventPlayer.player_status != GameStatus.WAITING
+    @Condition eventPlayer.player_status != GameStatus.WAITING 
+    @Condition eventPlayer.player_status != GameStatus.COUNTDOWN
     @Condition eventPlayer.isCommunicatingEmote()
 
     while ruleCondition:
@@ -44,10 +45,13 @@ rule "速度控制":
         eventPlayer.applyDriftImpulse()
         wait(0.1)
 
+
 rule "氮气加速":
     @Event eachPlayer
     @Condition isGameInProgress()
     @Condition eventPlayer.isCommunicatingEmote()
+    @Condition eventPlayer.player_status != GameStatus.WAITING 
+    @Condition eventPlayer.player_status != GameStatus.COUNTDOWN
     @Condition eventPlayer.isHoldingButton(Button.CROUCH)
 
     eventPlayer.boosted_state = true
@@ -55,6 +59,29 @@ rule "氮气加速":
     eventPlayer.showBoostedEffects()
     wait(eventPlayer.speed_boosted_time_player)
     eventPlayer.boosted_state = false
+
+    
+rule "消除氮气加速效果音效":
+    @Event eachPlayer
+    @Condition isGameInProgress()
+    @Condition eventPlayer.isCommunicatingEmote()
+    @Condition eventPlayer.be_timestamp != []
+
+    wait(eventPlayer.be_time)
+    eventPlayer.removeUEByName(eventPlayer.be_timestamp[0])
+    del eventPlayer.be_timestamp[0]
+    if ruleCondition:
+        loop()
+
+
+rule "下板":
+    @Event eachPlayer
+    @Condition isGameInProgress()
+    @Condition eventPlayer.isCommunicatingEmote() == false
+    
+    eventPlayer.on_board = false
+    eventPlayer.setMoveSpeed(100)
+
 
 rule "开始漂移":
     @Event eachPlayer
